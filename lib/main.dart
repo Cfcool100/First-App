@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
                 'Asynconf 2022',
                 style: TextStyle(
                   fontSize: 42,
+                  fontFamily: 'Poppins',
                   fontWeight:FontWeight.bold,
                 ),
               ),
