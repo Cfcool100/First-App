@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,11 +21,15 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
-        body: const Center(
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              SvgPicture.asset(
+                'assets/images/logo.svg',
+                color: Colors.blue,
+              ),
+              const Text(
                 'Asynconf 2022',
                 style: TextStyle(
                   fontSize: 42,
@@ -32,8 +37,7 @@ class MyApp extends StatelessWidget {
                   fontWeight:FontWeight.bold,
                 ),
               ),
-                // ajouter un padding
-              Text(
+              const Text(
                 'Salon virtuel de informatique. Du 27 au 29 deoctobre 2k22.',
                 style: TextStyle(
                   fontSize: 24,
