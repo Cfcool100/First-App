@@ -87,38 +87,6 @@ class _PlanningPageState extends State<PlanningPage> {
   }
 }
 
-// Card(
-//             margin: const EdgeInsets.only(top: 25),
-//             child: ListTile(
-//               isThreeLine: true,
-//               leading: Image.asset("assets/images/elon.jpeg"),
-//               title: Text(
-//                 'Speaker_1',
-//                 style: titleStyle(),
-//               ),
-//               subtitle: Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   const Padding(
-//                     padding: EdgeInsets.only(bottom: 6.0),
-//                     child: Text(
-//                       'Mobile development.',
-//                       style: TextStyle(fontSize: 15),
-//                     ),
-//                   ),
-//                   Padding(
-//                     padding: const EdgeInsets.only(bottom: 8.0),
-//                     child: Text('08h:30 - 11h15', style: textStyle2()),
-//                   ),
-//                 ],
-//               ),
-//               trailing: const Icon(
-//                 Icons.info,
-//                 color: Colors.blue,
-//               ),
-//             ),
-//           ),
-
 TextStyle textStyle2() {
   const textStyleH = TextStyle(
       fontSize: 12, fontWeight: FontWeight.w700, color: Colors.black54);
