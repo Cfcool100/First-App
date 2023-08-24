@@ -31,15 +31,7 @@ class _PlanningPageState extends State<PlanningPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Row(
-          children: [
-            Text('Plannings du Salon'),
-          ],
-        ),
-      ),
-      body: Center(
+    return Center(
         child: ListView.builder(
           itemCount: events.length,
           itemBuilder: (context, index) {
@@ -82,8 +74,7 @@ class _PlanningPageState extends State<PlanningPage> {
             );
           },
         ),
-      ),
-    );
+      );
   }
 }
 
