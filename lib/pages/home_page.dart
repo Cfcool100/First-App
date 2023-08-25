@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
             SvgPicture.asset(
               'assets/images/logo.svg',
               // ignore: deprecated_member_use
-              color: Colors.blue,
+              color: Colors.white,
             ),
             const Text(
               'Asynconf 2022',
@@ -25,32 +25,18 @@ class HomePage extends StatelessWidget {
                 fontSize: 40,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold,
+                color: Colors.white
               ),
             ),
             const Text(
               'Salon virtuel de informatique. Du 27 au 29 deoctobre 2022.',
               style: TextStyle(
                 fontSize: 21,
+                color: Colors.white
               ),
               textAlign: TextAlign.center,
             ),
             const Padding(padding: EdgeInsets.only(top: 22)),
-            ElevatedButton.icon(
-              style: const ButtonStyle(
-                  padding: MaterialStatePropertyAll(EdgeInsets.only(top: 12,bottom: 12, right: 15,left: 15))),
-              onPressed: () => {
-                Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (_, __, ___) => const PlanningPage(),
-                    ))
-              },
-              label: const Text(
-                'view planning',
-                style: TextStyle(fontSize: 18),
-              ),
-              icon: const Icon(Icons.calendar_today),
-            )
           ],
         ),
       );
