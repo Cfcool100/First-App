@@ -1,3 +1,5 @@
+import 'package:first_app_flutter/pages/add_page.dart';
+import 'package:first_app_flutter/pages/planning_page.dart';
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 
@@ -5,14 +7,76 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  int _currentIndex = 0;
+   setCurrentIndex(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+   }
+
+  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: titlePages(),
+          backgroundColor: Colors.black87,
+        ),
+        body: pages(),
+        backgroundColor: Colors.white24,
+        bottomNavigationBar: navBar(),
+      ),
     );
+  }
+
+  BottomNavigationBar navBar() {
+    return BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _currentIndex,
+        onTap: (index) => setCurrentIndex(index),
+        backgroundColor: Colors.black87,
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.white,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_month),
+            label: 'Planning',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add),
+            label: 'Add',
+          ),
+        ],
+      );
+  }
+
+  Text titlePages() {
+    return [
+          const Text('home'),
+          const Text('Planning of conference'),
+          const Text('Add form'),
+        ][_currentIndex];
+  }
+
+  Widget pages() {
+    return [
+        const HomePage(),
+        const PlanningPage(),
+        const AddPage(),
+      ][_currentIndex];
   }
 }
