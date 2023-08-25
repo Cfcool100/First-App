@@ -42,8 +42,9 @@ class _PlanningPageState extends State<PlanningPage> {
             final subject = event['subject'];
 
             return Card(
-              margin: const EdgeInsets.only(top: 25),
+              margin: const EdgeInsets.only(top: 25, right: 10, left: 10),
               child: ListTile(
+                tileColor: Colors.black12,
                 isThreeLine: true,
                 leading: Image.asset("assets/images/$avatar"),
                 title: Text(
