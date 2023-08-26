@@ -68,7 +68,7 @@ class _MyAppState extends State<MyApp> {
     return [
           const Text('home'),
           const Text('Planning of conference'),
-          const Text('Add form'),
+          const Text('Adding form'),
         ][_currentIndex];
   }
 
