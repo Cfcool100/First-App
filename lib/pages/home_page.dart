@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
             SvgPicture.asset(
               'assets/images/logo.svg',
               // ignore: deprecated_member_use
-              color: Colors.white,
+              color: const Color(0x665A98D9),
             ),
             const Text(
               'Asynconf 2022',
@@ -23,14 +23,14 @@ class HomePage extends StatelessWidget {
                 fontSize: 40,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.bold,
-                color: Colors.white
+                color: Color(0x665A98D9)
               ),
             ),
             const Text(
               'Salon virtuel de informatique. Du 27 au 29 deoctobre 2022.',
               style: TextStyle(
                 fontSize: 21,
-                color: Colors.white
+                color: Colors.black
               ),
               textAlign: TextAlign.center,
             ),

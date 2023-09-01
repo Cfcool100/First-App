@@ -30,10 +30,10 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: titlePages(),
-          backgroundColor: Colors.black87,
+          backgroundColor: const Color(0x665A98D9),
         ),
         body: pages(),
-        backgroundColor: Colors.white24,
+        backgroundColor: const Color.fromARGB(255, 229, 231, 220),
         bottomNavigationBar: navBar(),
       ),
     );
@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: (index) => setCurrentIndex(index),
-        backgroundColor: Colors.black87,
+        backgroundColor: const Color(0x665A98D9),
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.white,
         items: const [
