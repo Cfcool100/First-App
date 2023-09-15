@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
         currentIndex: _currentIndex,
         onTap: (index) => setCurrentIndex(index),
         backgroundColor: const Color(0x665A98D9),
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.black87,
         unselectedItemColor: Colors.white,
         items: const [
           BottomNavigationBarItem(

@@ -32,50 +32,51 @@ class _PlanningPageState extends State<PlanningPage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: ListView.builder(
-          itemCount: events.length,
-          itemBuilder: (context, index) {
-            final event = events[index];
-            final avatar = event['avatar'];
-            final time = event['time'];
-            final speaker = event['speaker'];
-            final subject = event['subject'];
+      child: ListView.builder(
+        itemCount: events.length,
+        itemBuilder: (context, index) {
+          final event = events[index];
+          final avatar = event['avatar'];
+          final time = event['time'];
+          final speaker = event['speaker'];
+          final subject = event['subject'];
 
-            return Card(
-              margin: const EdgeInsets.only(top: 25, right: 10, left: 10),
-              child: ListTile(
-                tileColor: Colors.black12,
-                isThreeLine: true,
-                leading: Image.asset("assets/images/$avatar"),
-                title: Text(
-                  '$speaker',
-                  style: titleStyle(),
-                ),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 6.0),
-                      child: Text(
-                        '$subject',
-                        style: const TextStyle(fontSize: 15),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 8.0),
-                      child: Text('$time', style: textStyle2()),
-                    ),
-                  ],
-                ),
-                trailing: const Icon(
-                  Icons.info,
-                  color: Colors.blue,
-                ),
+          return Card(
+            margin: const EdgeInsets.only(top: 25, right: 10, left: 10),
+            child: ListTile(
+              // contentPadding: const EdgeInsets.only(top: 0, bottom: 0),
+              tileColor: Colors.black12,
+              isThreeLine: true,
+              leading: Image(image: AssetImage("assets/images/$avatar")),
+              title: Text(
+                '$speaker',
+                style: titleStyle(),
               ),
-            );
-          },
-        ),
-      );
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 6.0),
+                    child: Text(
+                      '$subject',
+                      style: const TextStyle(fontSize: 15),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text('$time', style: textStyle2()),
+                  ),
+                ],
+              ),
+              trailing: const Icon(
+                Icons.info,
+                color: Colors.blue,
+              ),
+            ),
+          );
+        },
+      ),
+    );
   }
 }
 
